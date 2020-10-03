@@ -18,9 +18,7 @@ exports.min = function min (array) {
 //avg
 
   exports.avg = function avg (array) {    
-    if(array.length > 0) {
-      return array.reduce((sum, cur) => sum + cur) / array.length;
-      }  
-        return 0;
+    if(!Array.isArray(array) || array.length == 0) return 0;
+    return array.reduce((sum, current) => sum +=current) / array.length;
     }
   
